@@ -1,12 +1,13 @@
-<div class="section no-pad-bot" id="index-banner">
+<div class="banner-area">
   <div class="container">
-    <h1 class="text_h center header cd-headline letters type">
-      <span>I Love</span>
-      <span class="cd-words-wrapper waiting">
-        <b class="is-visible">creating</b>
-        <b>designing</b>
-        <b>developing</b>
-      </span>
-    </h1>
+    <div class="row justify-content-center height align-items-center">
+      <div class="col-lg-8">
+        <div class="banner-content text-center">
+          <span class="text-white top text-uppercase">Re-imagining the way</span>
+          <h1 class="text-white text-uppercase">We grow money, Guaranteed</h1>
+          <a href="#" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
