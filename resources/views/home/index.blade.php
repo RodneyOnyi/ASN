@@ -1,8 +1,24 @@
 @extends('layouts.master')
 
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/timeline.css') }}">
+<link rel="stylesheet" href="{{ asset('css/carousel.css') }}">
+@endsection
+
+@section('scripts')
+<script src="{{ asset('js/carousel.js') }}"></script>
+@endsection
+
 @section('content')
 <!-- Start Feature Area -->
 <section class="featured-area">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="section-title text-center">
+        <h3>Benefits you'll love</h3>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -14,7 +30,7 @@
             <h6 class="title text-uppercase">Affiliates</h6>
             <p>
               @foreach ($benefit_affiliates as $benefit_affiliate)
-              {{ $benefit_affiliate->id.'.'.$benefit_affiliate->content }} <br/>
+              {{ $benefit_affiliate->id.'. '.$benefit_affiliate->content }} <br/>
               @endforeach
             </p>
           </div>
@@ -26,10 +42,10 @@
             <span class="lnr lnr-clock"></span>
           </div>
           <div class="desc">
-            <h6 class="title text-uppercase">Providers</h6>
+            <h6 class="title text-uppercase">Service Providers</h6>
             <p>
               @foreach ($benefit_providers as $benefit_provider)
-              {{ $benefit_provider->id.'.'.$benefit_provider->content }} <br/>
+              {{ $benefit_provider->id.'. '.$benefit_provider->content }} <br/>
               @endforeach
             </p>
           </div>
@@ -39,273 +55,310 @@
   </div>
 </section>
 <!-- End Feature Area -->
+
+<!-- Start Amazing Works Area -->
+<section class="amazing-works-area">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="section-title text-center">
+        <h3>How the ASN Works</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <ul class="timeline">
+        <li>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"></h4>
+            </div>
+            <div class="timeline-body">
+              <p>An affiliate matches client needs with the right service provider listed on ASN.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"></h4>
+            </div>
+            <div class="timeline-body">
+              <p>Affliate contacts the service provider for details & confirms with the client.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"></h4>
+            </div>
+            <div class="timeline-body">
+              <p>The affliate makes the order for the client on confirmation.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <!--<div class="timeline-badge "></div>-->
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title"></h4>
+            </div>
+            <div class="timeline-body">
+              <p>The client pays directly to the service provider & enjoys the services!.</p>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- End Amazing Works Area -->
+
 <!-- Start Service Area -->
 <section class="service-area">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="section-title text-center">
-          <h3 class="text-white">Our Offered Services</h3>
-          <span class="text-white text-uppercase">Re-imagining the way</span>
+          <h3 class="text-white text-uppercase">The ASN Experience</h3>
+          <h3 class="text-white text-uppercase">What people are saying about ASN</h3>
         </div>
       </div>
     </div>
+
+    <!-- Testimonials -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div id="carouselTestimonials" class="carousel slide" data-ride="carousel" data-interval="9000" style="color:white;">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-md-3  active">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <div class="timeline-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <div class="timeline-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <div class="timeline-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <div class="timeline-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <div class="timeline-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <div class="timeline-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <div class="timeline-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h3 class="text-white text-uppercase">Service Providers working with ASN</h3>
+        </div>
+      </div>
+    </div>
+    <!-- -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div id="carouselProviders" class="carousel slide" data-ride="carousel" data-interval="9000">
+          <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-md-3  active">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <a href="#" title="image 1" class="thumb">
+                    <img class="img-fluid mx-auto d-block" src="img/s1.jpg?text=1" alt="slide 1">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <a href="#" title="image 3" class="thumb">
+                    <img class="img-fluid mx-auto d-block" src="img/s1.jpg?text=2" alt="slide 2">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <a href="#" title="image 4" class="thumb">
+                    <img class="img-fluid mx-auto d-block" src="img/s1.jpg?text=3" alt="slide 3">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <a href="#" title="image 5" class="thumb">
+                    <img class="img-fluid mx-auto d-block" src="img/s1.jpg?text=4" alt="slide 4">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <a href="#" title="image 6" class="thumb">
+                    <img class="img-fluid mx-auto d-block" src="img/s1.jpg?text=5" alt="slide 5">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <a href="#" title="image 7" class="thumb">
+                    <img class="img-fluid mx-auto d-block" src="img/s1.jpg?text=6" alt="slide 6">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item col-md-3 ">
+              <div class="panel panel-default">
+                <div class="panel-thumbnail">
+                  <a href="#" title="image 8" class="thumb">
+                    <img class="img-fluid mx-auto d-block" src="img/s1.jpg?text=7" alt="slide 7">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselProviders" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next text-faded" href="#carouselProviders" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End Service Area -->
+
+<!-- Start Story Area -->
+<section class="story-area">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-3">
+        <div class="story-title">
+          <h3 class="text-white">Our Untold Story</h3>
+          <span class="text-uppercase text-white">Re-imagining the way</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="story-box">
+          <h6 class="text-uppercase">From the part of beginning</h6>
+          <p>Usage of the Internet is becoming more common due to rapid advancement of technology and the power of globalization. Societies are becoming more inter-connected. Thoughts from different</p>
+          <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Story Area -->
+
+<!-- Start Footer Widget Area -->
+<section class="footer-widget-area">
+  <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-sm-6">
-        <div class="single-service">
-          <div class="thumb" style="background: url(img/s1.jpg);">
-            <div class="overlay overlay-content d-flex justify-content-center align-items-center">
-              <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
+      <div class="col-md-4">
+        <div class="single-widget d-flex flex-wrap justify-content-between">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="lnr lnr-pushpin"></span>
           </div>
           <div class="desc">
-            <h6 class="text-uppercase text-white">Creative Design</h6>
-            <p class="text-white">WordPress, the premier free open-source blogging utility, has gone through several upgrades in</p>
+            <h6 class="title text-uppercase">Address</h6>
+            <p>China Wu Yi Plaza, Galana road.</p>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single-service">
-          <div class="thumb" style="background: url(img/s2.jpg);">
-            <div class="overlay overlay-content d-flex justify-content-center align-items-center">
-              <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
+      <div class="col-md-4">
+        <div class="single-widget d-flex flex-wrap justify-content-between">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="lnr lnr-earth"></span>
           </div>
           <div class="desc">
-            <h6 class="text-uppercase text-white">Driving Lesson</h6>
-            <p class="text-white">The buying of large-screen TVs has absolutely skyrocketed lately. It seems that everyone wants one – </p>
+            <h6 class="title text-uppercase">Email Address</h6>
+            <div class="contact">
+              <a href="mailto:info@asnnetwork.co">info@asnnetwork.co</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single-service">
-          <div class="thumb" style="background: url(img/s3.jpg);">
-            <div class="overlay overlay-content d-flex justify-content-center align-items-center">
-              <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
+      <div class="col-md-4">
+        <div class="single-widget d-flex flex-wrap justify-content-between">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="lnr lnr-phone"></span>
           </div>
           <div class="desc">
-            <h6 class="text-uppercase text-white">Climbing Stairs</h6>
-            <p class="text-white">Having used discount toner cartridges for twenty years, there have been a lot of changes in the </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single-service">
-          <div class="thumb" style="background: url(img/s4.jpg);">
-            <div class="overlay overlay-content d-flex justify-content-center align-items-center">
-              <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
+            <h6 class="title text-uppercase">Phone Number</h6>
+            <div class="contact">
+              <a href="tel:1545">+254 7xx xxx xxx</a>
             </div>
-          </div>
-          <div class="desc">
-            <h6 class="text-uppercase text-white">Bike Accident</h6>
-            <p class="text-white">Every avid independent filmmaker has dre amed about making that special interest documentary, or </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single-service">
-          <div class="thumb" style="background: url(img/s5.jpg);">
-            <div class="overlay overlay-content d-flex justify-content-center align-items-center">
-              <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
-          </div>
-          <div class="desc">
-            <h6 class="text-uppercase text-white">Car Driving</h6>
-            <p class="text-white">Looking to buy a new computer Overwhelmed by all of the options available to you? Stressed by the </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single-service">
-          <div class="thumb" style="background: url(img/s6.jpg);">
-            <div class="overlay overlay-content d-flex justify-content-center align-items-center">
-              <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
-          </div>
-          <div class="desc">
-            <h6 class="text-uppercase text-white">Beach HoTel</h6>
-            <p class="text-white">Shure’s Music Phone Adapter (MPA) is our favorite iPhone solution, since it lets you use the headphones </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single-service">
-          <div class="thumb" style="background: url(img/s7.jpg);">
-            <div class="overlay overlay-content d-flex justify-content-center align-items-center">
-              <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
-          </div>
-          <div class="desc">
-            <h6 class="text-uppercase text-white">Under Passway</h6>
-            <p class="text-white">Over 92% of computers are infected with Adware and spyware. Such software is rarely accompanied by</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-sm-6">
-        <div class="single-service">
-          <div class="thumb" style="background: url(img/s8.jpg);">
-            <div class="overlay overlay-content d-flex justify-content-center align-items-center">
-              <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
-            </div>
-          </div>
-          <div class="desc">
-            <h6 class="text-uppercase text-white">Dawn to dusk</h6>
-            <p class="text-white">Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End Service Area -->
-<!-- Start Amazing Works Area -->
-</div>
-<div class="main-wrapper">
-  <section class="amazing-works-area">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="section-title text-center">
-          <h3>Our Amazing Works</h3>
-          <span class="text-uppercase">Re-imagining the way</span>
-        </div>
-      </div>
-    </div>
-    <div class="active-works-carousel mt-40">
-      <div class="item">
-        <div class="thumb" style="background: url(img/w1.jpg);"></div>
-        <div class="caption text-center">
-          <h6 class="text-uppercase">Vector Illustration</h6>
-          <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="thumb" style="background: url(img/w1.jpg);"></div>
-        <div class="caption text-center">
-          <h6 class="text-uppercase">Vector Illustration</h6>
-          <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="thumb" style="background: url(img/w1.jpg);"></div>
-        <div class="caption text-center">
-          <h6 class="text-uppercase">Vector Illustration</h6>
-          <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="thumb" style="background: url(img/w1.jpg);"></div>
-        <div class="caption text-center">
-          <h6 class="text-uppercase">Vector Illustration</h6>
-          <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="thumb" style="background: url(img/w1.jpg);"></div>
-        <div class="caption text-center">
-          <h6 class="text-uppercase">Vector Illustration</h6>
-          <p>LCD screens are uniquely modern in style, and the liquid crystals that make them work have allowed humanity to</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="main-wrapper">
-  <!-- End Amazing Works Area -->
-  <!-- Start Story Area -->
-  <section class="story-area">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-3">
-          <div class="story-title">
-            <h3 class="text-white">Our Untold Story</h3>
-            <span class="text-uppercase text-white">Re-imagining the way</span>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="story-box">
-            <h6 class="text-uppercase">From the part of beginning</h6>
-            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and the power of globalization. Societies are becoming more inter-connected. Thoughts from different</p>
-            <a href="#" class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Story Area -->
-  <!-- Start Subscription Area -->
-  <section class="subscription-area">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="section-title text-center">
-            <h3>Subscribe for our Newsletter</h3>
-            <span class="text-uppercase">Re-imagining the way</span>
-          </div>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <div id="mc_embed_signup">
-            <form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01" method="get" class="subscription relative">
-              <input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required>
-              <div style="position: absolute; left: -5000px;">
-                <input type="text" name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="">
-              </div>
-              <button class="primary-btn hover d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></button>
-              <div class="info"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Subscription Area -->
-  <!-- Start Footer Widget Area -->
-  <section class="footer-widget-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="single-widget d-flex flex-wrap justify-content-between">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="lnr lnr-pushpin"></span>
-            </div>
-            <div class="desc">
-              <h6 class="title text-uppercase">Address</h6>
-              <p>56/8, panthapath, west <br> dhanmondi, kalabagan, <br>Dhaka - 1205</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="single-widget d-flex flex-wrap justify-content-between">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="lnr lnr-earth"></span>
-            </div>
-            <div class="desc">
-              <h6 class="title text-uppercase">Email Address</h6>
-              <div class="contact">
-                <a href="mailto:info@dataarc.com">info@dataarc.com</a> <br>
-                <a href="mailto:support@dataarc.com">support@dataarc.com</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="single-widget d-flex flex-wrap justify-content-between">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="lnr lnr-phone"></span>
-            </div>
-            <div class="desc">
-              <h6 class="title text-uppercase">Phone Number</h6>
-              <div class="contact">
-                <a href="tel:1545">012 4562 982 3612</a> <br>
-                <a href="tel:54512">012 6321 956 4587</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Footer Widget Area -->
-  @endsection
+<!-- End Footer Widget Area -->
+@endsection

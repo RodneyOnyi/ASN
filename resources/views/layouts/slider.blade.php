@@ -3,8 +3,8 @@
     <div class="row justify-content-center height align-items-center">
       <div class="col-lg-8">
         <div class="banner-content text-center">
-          <span class="text-white top text-uppercase">Re-imagining the way</span>
-          <h1 class="text-white text-uppercase">We grow money, Guaranteed</h1>
+          <h1 class="text-white text-uppercase">Do More</h1>
+            <span class="text-white top text-uppercase">Reimaging income</span><br/><br/>
           <a href="#" class="primary-btn d-inline-flex align-items-center"><span class="mr-10">Get Started</span><span class="lnr lnr-arrow-right"></span></a>
         </div>
       </div>

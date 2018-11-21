@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
   <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  @yield('css')
 
 </head>
 <body>
@@ -52,6 +53,7 @@
   <script src="{{ asset('js/jquery.nice-select.min.js') }}"></script>
   <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
   <script src="{{ asset('js/main.js') }}"></script>
-  
+  @yield('scripts')
+
 </body>
 </html>

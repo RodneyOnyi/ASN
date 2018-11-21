@@ -52,6 +52,10 @@ class ContentController extends Controller
     return Content::find($id);
   }
 
+  public function showAll()
+  {
+    return Content::get();
+  }
   /**
   * Show the form for editing the specified resource.
   *

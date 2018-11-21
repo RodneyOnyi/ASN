@@ -18,5 +18,5 @@ Route::get('/contents', function () {
 });
 
 Route::get('/', 'ContentController@index');
-Route::get('/content', 'ContentController@index');
+Route::get('/content', 'ContentController@showAll');
 Route::get('/content/{benefit}','ContentController@show');
